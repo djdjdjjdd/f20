@@ -1,0 +1,86 @@
+@import "common";
+@import "grid";
+
+.header {
+    .logo {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.content.search {
+    text-align: center;
+}
+
+.content.search.emailInput {
+    width: 20rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content.search.submitForm {
+    width: 20rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Lato', 'sans-serif';
+}
+
+.product>.level {
+    background-color: blueviolet;
+    color: black;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product>button {
+    border: 0;
+    margin: 15px;
+    background-color: #FFC7B3;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: aquamarine;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+.footer>span {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: beige
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript naang cao</title>
+  </head>
+  <body></body>
+  <script>
+    let student1 = {
+      id: 1234,
+      firstName: "tran",
+      lastName: "dũng",
+      phoneNumber: "947499393",
+    };
+    let student2 = {
+      id: 1234,
+      firstName: "tran",
+      lastName: "dũng",
+      phoneNumber: "947499393",
+    };
+    const student = (_id, firstName, lastName, phoneNumber, bird) => {
+      return {
+        id: _id,
+        firstName,
+        lastName,
+        phoneNumber,
+      };
+    };
+    let arrStudent = [student1, student2];
+    function inMang(A) {
+      document.write("<hr />");
+      A.forEach((item, index) => {
+        document.write("<p>" + "id" + item.id + "</p>");
+        document.write("<p> hv thứ" + 1 + "</p>");
+        document.write(
+          "<p>" + "full name:" + item.firstName + "" + item.lastName + "</p>"
+        );
+      });
+    }
+    const listStudents = [
+      student(123, "trần", "dũng", "947499393"),
+      student(124, "nguyễn", "long", "489334949"),
+      student(125, "nguyễn", "thu nguyệt", "73463593"),
+      student(126, "phạm", "đỗ duy", "383874644"),
+    ];
+
+    // tìm học viên
+    const sortStudents = listStudents.sort((item1, item2) => {
+      return item1.lastName > item2.lastName;
+    });
+    inMang(sortStudents);
+    const student_finded = listStudents.find((item) => 123 === item.id);
+    document.write("<hr />");
+    document.write("<p> hv có id là 1 23 là </p>");
+    document.write("<p>" + "full name:" + student_finded.id + "</p>");
+    document.write(
+      "<p>" +
+        "full name:" +
+        student_finded.firstName +
+        " " +
+        student_finded.lastName +
+        "</p>"
+    );
+    //document.write("<p> <b> hv thứ:"+(index+1)+"</b> </p>")
+    listStudents.forEach((item, index) => {
+      document.write("<p>" + "id" + item.id + "</p>");
+      document.write("<p> hv thứ" + 1 + "</p>");
+      document.write(
+        "<p>" + "full name:" + item.firstName + "" + item.lastName + "</p>"
+      );
+    });
+    // tìm ra học viên 2k
+    const studen_2k = listStudents.filter((item) => 2000 === item.bird);
+    inMang(studen_2k);
+
+    document.write("<hr />");
+    sortStudents.forEach((item, index) => {
+      document.write("<p>" + "id" + item.id + "</p>");
+      document.write("<p> hv thứ" + 1 + "</p>");
+      document.write(
+        "<p>" + "full name:" + item.firstName + "" + item.lastName + "</p>"
+      );
+    });
+    //map method
+    const newListStudents = listStudents.map((item) => {
+      item.fullName = item.firstName + " " + item.lastName;
+      return item;
+    });
+    // reduce method
+    const listInt=[2,3,4,5,6];
+    const tong=listInt.reduce((resVal,currentValue) =>{
+      return resVal +currentValue;
+    });
+    console.log("tong: ", tong);
+
+    const getPInfo=(id_hoaDon, id_SanPham, SoLuong) =>{
+      return{
+        id_SanPham, id_hoaDon,SoLuong
+      }    
+    }
+    const listProductInfo=[
+      getPInfo(123,234,10),
+      getPInfo(1312,234,123),
+      getPInfo(234,235,555),
+      getPInfo(133,235,376),
+    ];
+    
+    // tinh số lượng san PHẨM CÓ MẶT HÀNG CÙNG ID
+    const tongSLDaBan=listProductInfo.reduce((total, value) => {
+      return total + value.SoLuong;
+    },0);
+    console.log('tổng số lượng bán ra', tongSLDaBan);
+  
+    
+  // tính toán và đứa ra các danh sách các sản phẩm đã được tính t.ổng
+     const resultListProduce=listProductInfo.reduce((res, item) =>{
+       const obj = res.find((itemf) => itemf.id_SanPham === item.id_SanPham);
+       if(obj){
+        obj.SoLuong+=item.SoLuong;
+      }else{
+        res.push(item);
+      }
+      return res;
+  },[]);
+     console.log("resultlistProduce: ",resultListProduce);
+      
+     const objRaw={
+      name:"dũng ",
+      bird:"1994",
+     }
+     const resultListProduct2=Object.keys(objRaw,item).reduce((resval, item) => {
+      resVal.push({
+        keyName:item,
+        value: objRaw[item]
+      });
+      return resVal;
+     },[]);
+     console.log("resultListProduct2 ", resultListProduct2);
+     
+     //convert mảng thành 1 object duy nhất
+     const object=arr.reduce((obj, item) =>{
+      obj[item.keyName]=item.value;
+      return obj;
+     },{});
+     const check = listInt.includes(61);
+     console.log("check", check);
+     
+      ketName: value
+     
+    
+    // console.log
+    console.log("arr student", arrStudent);
+    console.log("list Student", listStudents);
+    class ConNguoi{
+      constructor(hoTen,tuoi){
+        this.hoTen=hoTen;
+        this.tuoi=tuoi;
+      }
+    }
+    class SinhVien extends ConNguoi{
+        constructor(id, hoTen){
+          super(hoTen,tuoi)
+          this.id=id;
+          this.hoTen=hoTen;
+      }
+      get fullName(){
+        return this.hoTen;
+      }
+      set fullName(val){
+        this.hoTen=val;
+      }
+      sayHello(){
+        console.log("xin chào các bạn tôi là" + this.fullName);
+      }
+    }
+    const sv1=new SinhVien(123,"trần dũng");
+
+    
+  </script>
+</html>

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+.justify-content-space-bettwen {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+.text-center {a
+    text-align: center;
+}
+
+.margin-auto {
+    margin: auto;
+}

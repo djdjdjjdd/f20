@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login5</title>
+</head>
+<style>
+    @import url('http');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    .header{
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items:center ;
+        padding: 20px 100px;
+        z-index: 99;
+        background-color: transparent;
+    }
+    .header .nav a{
+        text-decoration: none;
+        color:#AD7B6F;
+        font-size: 17px;
+        margin-left: 20px;
+        font-weight: 600;
+    }
+    .header .search input
+    {
+        background: transparent;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 2px solid rgb(172, 121, 26);
+        padding-left:10px ;
+        right: 100px;
+        outline: none;
+        color:#0C5776;
+    }
+    .header .search i{
+        position: absolute;
+        right: 110px;
+        top:22px;
+        color:black;
+    }
+    .background{
+        width:100% ;
+        height: 100vh;
+        background-image: url("z4828867030557_e347092f53f0c6a88dfc3d1d8daaf9f6.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .home{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: 75%;
+        height: 75%;
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        margin-top: 10px;
+        border:1px solid black;
+        border-radius: 10px;
+        border:none;
+    }
+    .content{
+        display:flex ;
+        flex-direction: column;
+        width:700px ;
+        padding:100px 0;
+
+    }
+    .content a{
+        position: relative;
+        text-decoration: none;
+        color:blue;
+        font-size: 3em;
+        font-weight: 700;
+        top:-40px;
+        left: 80px;
+    }
+    .content h2{
+        font-size: 3.5em;
+        text-align: center;
+        color:#E350A8;
+    }
+    .content h3{
+        font-size: 2em;
+        text-align: center;
+        color:#01877E;
+
+    }
+    .content pre{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1em;
+        color:#EE6457;
+    }
+    .content  .icon{
+        margin-top: 20px;
+        font-size: 1.5em;
+        display:flex;
+        justify-content: center;
+
+    }
+    .content .icon i{
+        margin-left: 20px;
+        color:#E68A8C;
+    }
+    .login{
+        width: 450px;
+        position: relative;
+        padding:100px 30px;
+        backdrop-filter: blur(20px);
+
+    }
+    .login h2{
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+        color:#143A51;
+
+    }
+    .login .input{
+        position: relative;
+        width: 100%;
+        height: 30px;
+        margin-bottom:40px ;
+    }
+    .login .input .input1{
+        font-size: 16px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom:2px solid #E68A8C;
+        width: 100%;
+        height: 100%;
+    }
+    ::placeholder{
+        color: #01877E;
+        font-size: 18px;
+    }
+    .login .input1{
+        position: relative;
+        right:-70px;
+        bottom:27px;
+        color:#ffb758;
+    }
+    .check{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        color:#adc241;
+    }
+    .check a{
+        text-decoration: none;
+        color:#faa4b1;
+    }
+    .login .button{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    button{
+        width: 100%;
+        height: 40px;
+        background-attachment: crimson;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 7px;
+        color:#91bbe5;
+
+    }
+    button:active{
+        font-size: 25px;
+    }
+    .login .sign-up{
+        display:flex;
+        justify-content: center;
+
+    }
+    .login .sign-up a{
+        text-decoration: none;
+        color:#ffb758;
+        font-weight: 700;
+    }
+    .login .sign-up p{
+        color:#faa4b1;
+    }
+    .sign-up a:hover{
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav">
+           <a href ='#'>Home</a>
+           <a href='#'>About</a>
+           <a href="#">Service</a>
+           <a href="#">Contact</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <a><i class="fas fa-search"></i></a>
+        </div>
+    </header>
+    <div class="background"></div>
+    <section class="home">
+        <div class="content">
+            <a href="#" class="logo">Codehai</a>
+            <h2>Welcome!</h2>
+            <h3>To Our Nem Website</h3>
+            <pre>Lorem ipsum, dolor sit amen consenter adipiscing elit. Beatae,asperiores</pre>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-luggage-cart"></i>
+                <i class="fas fa-glass-cheers"></i>
+                <i class="fas fa-gifts"></i>
+            </div>
+
+        </div>
+        <div class="login">
+            <h2>Sign In</h2>
+            <div class="input">
+                <input type ="text" class="input1" placeholder="Email" required>
+                <i class="far fa-envelope"></i>
+            </div>
+            <div class="input">
+                <input type="password" class="input1" placeholder="Password" required>
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="check">
+               <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password ?</a>
+            </div>
+            <div class="button>">
+                <button class="btn">Sign In</button>
+            </div>
+            <div class="sign-up">
+                <p>Don't have an account?</p>
+                <a href="#">Sign up</a>
+            </div>
+        </div>        
+</body>
+</html>
